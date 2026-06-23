@@ -126,7 +126,7 @@ function App() {
   // --- RENDER HELPERS ---
   const getStatusText = () => {
     if (emergencyPowerActive) {
-      return "GENSET DARURAT MENYALA! Server beroperasi dengan tenaga dinamo engkol...";
+      return "GENSET DARURAT MENYALA! Lampu di web ini menyala dengan tenaga dinamo engkol...";
     }
     if (isTargetReached) {
       return "Silakan klik tombol Cek Nyala Apa Belum di bawah.";
