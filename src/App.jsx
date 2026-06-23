@@ -117,6 +117,7 @@ function App() {
       if (next >= 100) {
         setEmergencyPowerActive(true);
         setEmergencyCharge(100);
+        window.scrollTo({ top: 0, behavior: "smooth" });
         return 0;
       }
       return next;
