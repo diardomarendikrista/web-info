@@ -30,6 +30,7 @@ function App() {
   const [emergencyCharge, setEmergencyCharge] = useState(0); // Charge remaining when active
   const [isShaking, setIsShaking] = useState(false);
   const [particles, setParticles] = useState([]);
+  const [realWebsiteUrl] = useState("https://dev-dayaboard.diardo.my.id/");
 
   const shakeTimeoutRef = useRef(null);
 
@@ -122,9 +123,9 @@ function App() {
     });
   };
 
-  // --- ACTION: RELOAD PAGE ---
+  // --- ACTION: REDIRECT TO REAL WEBSITE ---
   const handleReload = () => {
-    window.location.reload();
+    window.location.href = realWebsiteUrl;
   };
 
   // --- RENDER HELPERS ---
