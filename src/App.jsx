@@ -123,11 +123,6 @@ function App() {
     });
   };
 
-  // --- ACTION: REDIRECT TO REAL WEBSITE ---
-  const handleReload = () => {
-    window.location.href = realWebsiteUrl;
-  };
-
   // --- RENDER HELPERS ---
   const getStatusText = () => {
     if (emergencyPowerActive) {
@@ -390,8 +385,8 @@ function App() {
           <div className="flex flex-col gap-4">
             {/* Primary Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                onClick={handleReload}
+              <a
+                href={realWebsiteUrl}
                 className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold py-3.5 px-8 rounded-2xl transition-all duration-200 flex items-center justify-center gap-2.5 shadow-[0_4px_0_rgb(161,98,7)] active:translate-y-1 active:shadow-none font-sans"
               >
                 <svg
@@ -408,7 +403,7 @@ function App() {
                   />
                 </svg>
                 Cek Nyala Apa Belum
-              </button>
+              </a>
 
               <button
                 onClick={handleCrank}
